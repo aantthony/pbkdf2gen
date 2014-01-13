@@ -1,0 +1,28 @@
+{
+  "name": "pbkdf2gen",
+  "version": "0.0.1",
+  "description": "pbkdf2gen =========",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aantthony/pbkdf2gen.git"
+  },
+  "keywords": [
+    "pbkdf2"
+  ],
+  "author": "Anthony Foster <git@af.id.au>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aantthony/pbkdf2gen/issues"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "should": "~2.1.1",
+    "mocha": "~1.17.0"
+  }
+}
