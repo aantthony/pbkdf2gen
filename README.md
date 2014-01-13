@@ -22,3 +22,6 @@ pbkdf2.hash('password123', function (err, hash) {
     console.log(correct); // true
   });
 });
+
+
+[![Build Status](https://travis-ci.org/aantthony/pbkdf2gen.png?branch=master)](https://travis-ci.org/aantthony/pbkdf2gen) [![Coverage Status](https://coveralls.io/repos/aantthony/pbkdf2gen/badge.png?branch=master)](https://coveralls.io/r/aantthony/pbkdf2gen?branch=master)

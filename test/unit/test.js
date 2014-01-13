@@ -1,7 +1,7 @@
 var should = require('should');
 
 describe('pbkdf2gen', function () {
-  var lib = require('../../lib');
+  var lib = require('../../index');
 
   describe('#hash', function (done) {
     it('should not crash', function (done) {
