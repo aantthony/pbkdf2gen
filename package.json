@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git://github.com/aantthony/pbkdf2gen.git"
   },
+  "engines": {
+    "node": ">=0.8"
+  },
   "keywords": [
     "pbkdf2"
   ],
