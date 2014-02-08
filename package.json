@@ -1,6 +1,6 @@
 {
   "name": "pbkdf2gen",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "pbkdf2gen =========",
   "main": "lib/index.js",
   "scripts": {
