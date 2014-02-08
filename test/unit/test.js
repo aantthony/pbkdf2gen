@@ -1,6 +1,8 @@
 var should = require('should');
 
+
 describe('pbkdf2gen', function () {
+
   var lib = require('../../index');
 
   describe('#hash', function (done) {
@@ -8,22 +10,26 @@ describe('pbkdf2gen', function () {
       lib.hash('3248923489', done);
     });
   });
+
   describe('#compare', function () {
 
+    var HASH_PASSWORD123 = 'fn+ACbi9ET+TWNrpzmDKaww08JTgdjD3PZIXPt7pzG7OpDAurU5w7vbJpe6nkDcA11aGiTC7Sb25sZzmbPXdkwZlvj9rq0gfO6I2XmSLJAgQtBMig2Op25UiELBQQBe1RVaIvD4k/eXVS6TVO5sRQCYw9FV7O2WCRi1H8AXha3ZykuaXhQJxR8DtO3UktiHF:1500';
+
     it('should return true for a valid hash', function (done) {
-      lib.compare('xOkuvcf7n4OdTc+/3rkGRqYAWUDXvuxy8bGaDb3PyPEBdVBVwEi2yw+fLHQW', 'password123', function (err, res) {
+      lib.compare(HASH_PASSWORD123, 'password123', function (err, res) {
         if (!res) throw new Error('Expected match');
         done();
       });
     });
 
     it('should return false for a valid hash with the wrong password', function (done) {
-      lib.compare('xOkuvcf7n4OdTc+/3rkGRqYAWUDXvuxy8bGaDb3PyPEBdVBVwEi2yw+fLHQW', 'passw3ord123', function (err, res) {
+      lib.compare(HASH_PASSWORD123, 'passw3ord123', function (err, res) {
         if (res) throw new Error('Unexpected match');
         done();
       });
     });
   });
+
   describe('#hash', function (done) {
     it('should generate valid hashes', function (done) {
       lib.hash('2390239029023', function (err, hash) {
